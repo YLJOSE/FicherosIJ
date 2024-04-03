@@ -1,0 +1,27 @@
+La clase File
+
+Ejercicio 1
+
+Escribir un programa Java que le pida al usuario el nombre de un directorio y el nombre de un elemento.
+Compruebe si el elemento es un fichero que existe en el directorio tecleado por el usuario.
+Si no existe devuelve un mensaje de error y sale
+Si el elemento es un directorio debe listar su contenido(comprobar en la API cómo averiguar si es un directorio)
+Si el elemento es un fichero visualiza la longitud del fichero
+Si el elemento es un fichero pide al usuario el nombre nuevo y lo renombra.
+
+Ejercicio 2
+
+Escribir un programa Java que le pida al usuario el nombre de un fichero y el nombre de un directorio.
+Compruebe si el fichero existe. Si no existe devuelve un mensaje de error y sale.
+Comprueba si se puede leer y si se puede escribir en él
+Visualiza la longitud del fichero
+Borra el fichero
+
+Ejercicio 3
+
+Escribir un programa Java que le pida al usuario el nombre de un directorio y de un fichero.
+Compruebe si el fichero existe dentro del directorio. Si no existe devuelve un mensaje de error y sale.
+Listar los subdirectorios del directorio
+Listar los ficheros del directorio
+Calcular el tamaño total de los ficheros de un directorio
+Listar los ficheros de un directorio que empiecen por una letra en particular (utilizar el método charAt())

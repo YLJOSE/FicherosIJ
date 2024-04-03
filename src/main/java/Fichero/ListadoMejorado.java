@@ -16,7 +16,7 @@ public class ListadoMejorado {
 		}
 
 		);*/
-        File archivos[] = directorio.listFiles((dir, name) -> name.toLowerCase().endsWith(".txt"));
+        File[] archivos = directorio.listFiles((dir, name) -> name.toLowerCase().endsWith(".txt"));
         for (File file : archivos) {
             System.out.println(file.getAbsoluteFile());
         }
