@@ -1,13 +1,15 @@
-package EjerciciosPrimeraParte;
+package EjerciciosUno;
 
 import java.io.File;
 import java.util.Scanner;
 
 public class EjercicioUno {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         ejercicioUno();
     }
+
     static void ejercicioUno() {
         String nombreDirectorio, nombreElemento;
         System.out.println("Ingresa el nombre del directorio:");
@@ -36,6 +38,7 @@ public class EjercicioUno {
                     }
 
                 }
+                System.out.println("No existe!");
             }
         } else {
             System.out.println("No es un directorio o no existe!");

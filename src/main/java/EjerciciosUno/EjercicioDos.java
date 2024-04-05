@@ -1,4 +1,4 @@
-package EjerciciosPrimeraParte;
+package EjerciciosUno;
 
 import java.io.File;
 import java.util.Scanner;
@@ -18,11 +18,12 @@ public class EjercicioDos {
         nombreFichero = sc.nextLine();
         File fichero = new File("c:/" + nombreDirectorio + File.separator + nombreFichero + ".txt");
         if (fichero.exists()) {
-            System.out.println("Existe!");
+            System.out.println(fichero.getName() + " -> Existe!");
+            System.out.println("La longitud del fichero es: " + fichero.length());
+            fichero.deleteOnExit();
 
         } else {
             System.out.println("Error");
-            sc.close();
         }
     }
 }
