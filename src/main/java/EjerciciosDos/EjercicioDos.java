@@ -14,14 +14,18 @@ public class EjercicioDos {
         }
     }
 
-    static void ejercicioDos(int contador,int lineasALeer) throws IOException {
+    static void ejercicioDos(int lineasALeer) throws IOException {
+        int comprobar = 0;
         try (FileReader entrada = new FileReader("c:/prueba/auxilio.txt")) {
             try {
                 int c;
                 do {
                     c = entrada.read();
                     if (c != -1) {
-                        if (contador > lineasALeer) {
+                        if (c == '\n') {
+                            comprobar++;
+                        }
+                        if (comprobar < lineasALeer) {
                             System.out.print((char) c);
                         }
                     }
@@ -61,7 +65,6 @@ public class EjercicioDos {
             }
         } while (contador < lineasALeer);
         contador--;
-        System.out.println(contador + " " + lineasALeer);
-        ejercicioDos(contador,lineasALeer);
+        ejercicioDos(lineasALeer);
     }
 }
