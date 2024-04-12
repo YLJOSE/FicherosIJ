@@ -4,18 +4,15 @@ import java.io.*;
 import java.util.*;
 
 public class EjercicioCuatro {
-    static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
         modificarFile();
     }
 
     public static void modificarFile() {
         File fichero = new File("c:/prueba/ayuda.txt");
-        char abc[] = {'a', 'e', 'i', 'o', 'u'};
+        char[] abc = {'a', 'e', 'i', 'o', 'u'};
         ArrayList<Character> caracter = new ArrayList<>();
         String letra;
-        FileWriter escribiendo = null;
         try (FileReader entrada = new FileReader(fichero)) {
             try {
                 int c;
@@ -36,7 +33,7 @@ public class EjercicioCuatro {
             throw new RuntimeException(e);
         }
         try {
-            escribiendo = new FileWriter(fichero, true);
+            FileWriter escribiendo = new FileWriter(fichero, true);
 
             for (int i = 0; i < caracter.size(); i++) {
                 escribiendo.write(caracter.get(i));
