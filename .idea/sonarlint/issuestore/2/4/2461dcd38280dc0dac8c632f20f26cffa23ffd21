@@ -1,0 +1,10 @@
+
+}
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8™€Àî1J$00f0e809-d3e4-4339-b21a-006c334fdc3f
+_
+java:S1643"Use a StringBuilder instead.(©¯ˆ8œ€Àî1J$ced9ee60-b647-419b-bf90-fa021290a56f
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿ8Ÿ€Àî1J$32b7454a-6795-4621-8e59-89bfa2592cca
+f
+java:S1659"#Declare "texto" on a separate line.(¢çæš8´€Àî1J$9999d1d7-0965-48f6-a2a4-0d1c350ae79a
+„
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¼‘ôï8¶€Àî1J$e2e14da4-10ca-4de4-8ba4-1259f0788199
