@@ -1,8 +1,8 @@
 
-J
-java:S10661"/Merge this if statement with the enclosing one.(ßóÙ²üÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿ
-G
-java:S1659",Declare "nombreElemento" on a separate line.(Âºé„ÿÿÿÿÿ
-G
-java:S1659*",Declare "numeroPalabras" on a separate line.(¤Ô•ûÿÿÿÿ
+p
+java:S10661"/Merge this if statement with the enclosing one.(ßóÙ²üÿÿÿÿJ$5d9ce9b9-42d8-43c3-80b4-c2ac13c9f8e7
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿJ$d2c0da8c-9538-4244-9355-83fe089c9c29
+m
+java:S1659",Declare "nombreElemento" on a separate line.(Âºé„ÿÿÿÿÿJ$14de7c62-5e5c-44e6-814d-b31373776925
+m
+java:S1659*",Declare "numeroPalabras" on a separate line.(¤Ô•ûÿÿÿÿJ$4a0491ae-a2d4-4556-81cb-970a7900bcd1

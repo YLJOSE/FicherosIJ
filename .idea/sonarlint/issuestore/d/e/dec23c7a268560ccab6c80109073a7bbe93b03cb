@@ -1,0 +1,18 @@
+
+}
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8•«ƒæî1J$cda5baf0-a92d-4a24-a2f2-b39459d500dc
+}
+java:S1141,"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8™«ƒæî1J$8ffef398-c298-49dc-91c7-65a38fe010c3
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜…¾¼ıÿÿÿÿ8œ«ƒæî1J$3af5fd4b-1ca3-47ef-8e26-968876197c44
+p
+java:S2689"-Do not use a FileOutputStream in append mode.(¿Öå£8¬«ƒæî1J$c8d1bec7-da37-4c10-b24f-f458203ff197
+‰
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(•‡õùÿÿÿÿ8µ«ƒæî1J$c337c3b1-342e-4e5d-8de3-85720f5b559a
+„
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ˆ×é©8¶«ƒæî1J$17576d83-cb0c-439f-8e23-c8aa3f7c1ee4
+j	java:S108"")Either remove or fill this block of code.(ôÍÏ8¸«ƒæî1J$4332731a-bb72-4ab0-81eb-2d10feac47ea
+‚	java:S899(";Do something with the "boolean" value returned by "delete".(¹Î“üÿÿÿÿ8¹«ƒæî1J$4e5f77b7-45fa-4087-b916-968404528e9a
+–
+java:S4042("NUse "java.nio.file.Files#delete" here for better messages on error conditions.(¹Î“üÿÿÿÿ8º«ƒæî1J$a2a23c80-581d-497d-85d5-d1a4ad255916
+	java:S899)"=Do something with the "boolean" value returned by "renameTo".(íş‘ø8º«ƒæî1J$969dd476-a2dd-43b4-9274-f735756bcd4b
+j	java:S1081")Either remove or fill this block of code.(ôÍÏ8»«ƒæî1J$c23e8ab6-c2a4-4756-a56c-b257640a5c66

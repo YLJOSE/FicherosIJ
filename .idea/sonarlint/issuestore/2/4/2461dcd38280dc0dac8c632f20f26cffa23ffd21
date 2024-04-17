@@ -1,10 +1,10 @@
 
 }
-java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8™€Àî1J$00f0e809-d3e4-4339-b21a-006c334fdc3f
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8™€Àî1J$dffa6452-ea77-4be8-8f1a-c08dc1a3b417
 _
-java:S1643"Use a StringBuilder instead.(©¯ˆ8œ€Àî1J$ced9ee60-b647-419b-bf90-fa021290a56f
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿ8Ÿ€Àî1J$32b7454a-6795-4621-8e59-89bfa2592cca
+java:S1643"Use a StringBuilder instead.(©¯ˆ8œ€Àî1J$dd01a0d6-cefc-4ec9-a543-933e6094b0c2
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿ8Ÿ€Àî1J$14d3b143-6ff6-4d27-a35a-e07bf9f4f03b
 f
-java:S1659"#Declare "texto" on a separate line.(¢çæš8´€Àî1J$9999d1d7-0965-48f6-a2a4-0d1c350ae79a
+java:S1659"#Declare "texto" on a separate line.(¢çæš8´€Àî1J$1dbd6e83-6b20-4014-9f16-69d716a93560
 „
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(¼‘ôï8¶€Àî1J$e2e14da4-10ca-4de4-8ba4-1259f0788199
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(¼‘ôï8¶€Àî1J$6a9d4afc-84c6-4cfa-8238-c4759ba43940
