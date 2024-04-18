@@ -1,6 +1,8 @@
 package EjerciciosDos;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class EjercicioCinco {
@@ -17,6 +19,7 @@ public class EjercicioCinco {
 
     static void buscarPalabra() throws IOException {
         String palabraABuscar, texto = "";
+        char letra;
         File fichero = new File("c:/prueba/auxilio.txt");
         System.out.println("Ingresa la palabra que deseas buscar:");
         palabraABuscar = sc.nextLine();
@@ -25,13 +28,13 @@ public class EjercicioCinco {
                 int c;
                 do {
                     c = entrada.read();
+                    letra = (char) c;
                     if (c != -1) {
-                        texto += (char) c;
+                        texto += letra;
                     }
                 } while (c != -1);
-                System.out.print(texto);
-                int value = texto.indexOf(palabraABuscar);
-                System.out.println(value);
+                System.out.println(texto);
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

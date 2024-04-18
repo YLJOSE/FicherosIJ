@@ -241,3 +241,7 @@ Q.idea/sonarlint/securityhotspotstore/e/b/eb4e1adead44e930471ab25cc7f521df7ba0d1
 Q.idea/sonarlint/securityhotspotstore/e/b/ebd897959317594c5c87899885e98f2422886538,4\e\4ea5186dcacaa75ff4e94b409bdeb4978dbac1b9
 w
 G.idea/sonarlint/issuestore/1/d/1de047ce9bae4794291e45411d41d043ca36ae92,2\d\2d8813307049c8300b092f57c00345944778a83f
+^
+.src/main/java/EjerciciosDos/EjercicioSeis.java,d\4\d466cd3ca8673964dd541554fd2ab0a381c9f413
+Z
+*src/main/java/Fichero/ListadoMejorado.java,5\1\51908ab5d8db204234451c8eca3b9ebca193de6b
