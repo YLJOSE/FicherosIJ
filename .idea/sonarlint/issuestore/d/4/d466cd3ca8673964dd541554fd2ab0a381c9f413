@@ -1,0 +1,20 @@
+
+œ
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(†ä²„8Ý¿‚‘ï1J$dee5ce53-a75c-4cc6-aac9-4cf88106bdb5
+}
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8á¿‚‘ï1J$850f5734-dccb-4b5f-8677-2f764311e8c0
+_
+java:S16436"Use a StringBuilder instead.(¨É²÷8â¿‚‘ï1J$e51665d4-b2f2-45f9-80bb-963f57499b7f
+„
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ßê®øÿÿÿÿ8ä¿‚‘ï1J$198174d4-a5ff-41db-b619-0c785d5c172e
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëóÀóúÿÿÿÿ8æ¿‚‘ï1J$e35e59f7-495d-43a8-a003-29ce8aacc42a
+…
+java:S1659"BDeclare "media" and all following declarations on a separate line.(¢ÿ €8ÚÀ‚‘ï1J$6261561a-3c58-4f6c-b44a-a2e2b2183209
+l
+java:S1481")Remove this unused "moda" local variable.(¢ÿ €8ÛÀ‚‘ï1J$cb220435-c363-4b80-afca-8cf423ccce38
+m
+java:S1481"*Remove this unused "media" local variable.(¢ÿ €8ÛÀ‚‘ï1J$e3f77928-a831-4610-a42a-5e228cf023aa
+‰
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(”ÙÑ¹úÿÿÿÿ8ÞÀ‚‘ï1J$40abe4e8-a6cd-48b6-8779-0601da769c43
+‡
+java:S2147+"DCombine this catch with the one at line 41, which has the same body.(ï­£Ä8ßÀ‚‘ï1J$7ca15241-617a-401c-a68a-82e091d42a3d

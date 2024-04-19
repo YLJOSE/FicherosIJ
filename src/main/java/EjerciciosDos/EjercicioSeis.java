@@ -9,19 +9,9 @@ public class EjercicioSeis {
     }
 
     static void ejercicioSeis() {
-        int moda, media = 0, contador = 0;
+        int moda = 0, total = 0, contador = 0, contadorDos = 0;
+        double media;
         String valores = "";
-        ArrayList<Character> numero = new ArrayList<>();
-        numero.add('0');
-        numero.add('1');
-        numero.add('2');
-        numero.add('3');
-        numero.add('4');
-        numero.add('5');
-        numero.add('6');
-        numero.add('7');
-        numero.add('8');
-        numero.add('9');
         ArrayList<Character> numeros = new ArrayList<Character>();
         File fichero = new File("c:/prueba/numeros.txt");
         try (FileReader entrada = new FileReader(fichero)) {
@@ -45,17 +35,23 @@ public class EjercicioSeis {
         }
         System.out.println("\nNumeros: ");
         numeros.forEach(num -> System.out.print(num.toString()));
-        for (int i = 0; i < numero.size(); i++) {
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < numeros.size(); j++) {
-                if (numero.get(i) == numeros.get(j)) {
+                if (i == Character.getNumericValue(numeros.get(j))) {
                     contador++;
                 }
+                if (i == 0) {
+                    contadorDos++;
+                    total += Character.getNumericValue(numeros.get(j));
+                }
             }
-            valores += "Numero: " + numero.get(i) + " - " + contador + " veces.\n";
+            valores += "Numero: " + i + " - " + contador + " veces.\n";
             contador = 0;
         }
+        media = (double) total / contadorDos;
+        valores += "Media: " + media;
+        //insertarATxt(valores);
         System.out.println(valores);
-        // insertarATxt(valores);
     }
 
     static void insertarATxt(String texto) {
