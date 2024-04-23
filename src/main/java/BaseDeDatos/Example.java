@@ -6,7 +6,6 @@ import java.sql.*;
 
 public class Example {
     public static void main(String[] args) {
-
         Connection myConection = null;
         try {
             myConection = DriverManager.getConnection
