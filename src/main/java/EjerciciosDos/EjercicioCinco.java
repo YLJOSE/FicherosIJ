@@ -1,47 +1,40 @@
 package EjerciciosDos;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class EjercicioCinco {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        try {
-            buscarPalabra();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        String palabraBuscada = obtenerPalabra();
+        int contador = contarPalabra(palabraBuscada);
+        System.out.println("La palabra: " + palabraBuscada + " aparece " + contador + " veces en el archivo.");
     }
 
-    static void buscarPalabra() throws IOException {
-        String palabraABuscar, texto = "";
-        char letra;
-        File fichero = new File("c:/prueba/auxilio.txt");
-        System.out.println("Ingresa la palabra que deseas buscar:");
-        palabraABuscar = sc.nextLine();
-        try (FileReader entrada = new FileReader(fichero)) {
-            try {
-                int c;
-                do {
-                    c = entrada.read();
-                    letra = (char) c;
-                    if (c != -1) {
-                        texto += letra;
+    public static String obtenerPalabra() {
+        System.out.println("Ingresa la palbra que deseas buscar:");
+        String palabraABuscar = sc.nextLine();
+        return palabraABuscar;
+    }
+
+    public static int contarPalabra(String palabra) {
+        int contador = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("c:/prueba/ayuda20.txt"))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] palabras = linea.split(" ");
+                for (String p : palabras) {
+                    if (p.equalsIgnoreCase(palabra)) {
+                        contador++;
                     }
-                } while (c != -1);
-                System.out.println(texto);
-
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+                }
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
+        return contador;
     }
+
 }
 

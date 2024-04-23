@@ -20,7 +20,6 @@ public class EjercicioSeis {
                 do {
                     c = entrada.read();
                     if (c != -1) {
-                        System.out.print((char) c);
                         numeros.add((char) c);
                     }
                 } while (c != -1);
@@ -33,7 +32,7 @@ public class EjercicioSeis {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("\nNumeros: ");
+        System.out.println("Numeros: ");
         numeros.forEach(num -> System.out.print(num.toString()));
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < numeros.size(); j++) {
@@ -50,8 +49,7 @@ public class EjercicioSeis {
         }
         media = (double) total / contadorDos;
         valores += "Media: " + media;
-        //insertarATxt(valores);
-        System.out.println(valores);
+        insertarATxt(valores);
     }
 
     static void insertarATxt(String texto) {
