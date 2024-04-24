@@ -1,0 +1,13 @@
+1. Escribir un método que reciba por parámetro un array de valoresenteros correspondientes a
+ referencias a artículos y un array de valores reales correspondientes a los precios de los
+ artículos anteriores. Se podrá usar también ArrayList.
+ El método recibirá también el nombre de un fichero sobre el que se escribirá cada referencia de
+ artículo seguida de su precio.
+
+2.  Escribir un método que reciba por parámetro el nombre de un fichero que almacena una serie de
+ referencias y precios de artículos y muestre su contenido por pantalla.
+
+3. Realizar un método que reciba por parámetro el nombre de un fichero que almacena una serie de
+ referencias y precios de artículos y actualice los precios de forma que los superiores a 100 euros se
+  decrementen en un 50% y los inferiores se incrementen en un 50%. El método capturará y tratará todas
+  las excepciones que puedan producirse.

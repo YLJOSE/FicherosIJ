@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class BinarioIO {
     static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
         int numeroMateria;
         double nota;

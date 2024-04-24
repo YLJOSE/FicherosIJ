@@ -1,0 +1,11 @@
+Ejercicio n° 1
+
+Escribir un programa Java que realice la copia de un fichero (por ejemplo un fichero imagen).
+Se pide al usuario el fichero de entrada y el nombre del fichero de salida.
+
+Ejercicio n° 2
+
+Escribir un programa Java que permita crear secuencialmente un fichero binario que contenga la información
+de varias personas. Para cada persona se almacenará: nombre, apellido1, apellido2 y año de nacimiento.
+El nombre y los apellidos tendrán 20 caracteres rellenando con espacios al final para completar la
+ longitud. Leer el fichero
