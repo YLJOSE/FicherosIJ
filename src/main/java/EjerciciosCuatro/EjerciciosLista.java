@@ -60,7 +60,6 @@ public class EjerciciosLista {
         }
         ejercicioTres(nombreFichero);
     }
-
     /*Falta terminar este ejercicio*/
     static void ejercicioTres(String nombreFichero) {
         String texto;
