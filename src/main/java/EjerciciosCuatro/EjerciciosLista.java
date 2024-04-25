@@ -6,86 +6,82 @@ import java.util.*;
 public class EjerciciosLista {
     static Scanner sc = new Scanner(System.in);
 
+    // Método para escribir referencias y precios en un archivo
+    public static void escribirArchivo(String[] referencias, double[] precios, String nombreArchivo) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(nombreArchivo))) {
+            for (int i = 0; i < referencias.length; i++) {
+                writer.println(referencias[i] + " " + precios[i]);
+            }
+            System.out.println("Se han escrito los datos en el archivo correctamente.");
+        } catch (IOException e) {
+            System.err.println("Error al escribir en el archivo: " + e.getMessage());
+        }
+    }
+
+    // Método para mostrar el contenido de un archivo por pantalla
+    public static void mostrarContenido(String nombreArchivo) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                System.out.println(linea);
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+        }
+    }
+
+    // Método para actualizar precios en un archivo
+    public static void actualizarPrecios(String nombreArchivo) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo));
+             PrintWriter writer = new PrintWriter(new FileWriter(nombreArchivo + "_temp"))) {
+
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                String[] partes = linea.split(" ");
+                String referencia = partes[0];
+                double precio = Double.parseDouble(partes[1]);
+
+                if (precio > 100) {
+                    precio *= 0.5; // Decrementar un 50%
+                } else {
+                    precio *= 1.5; // Incrementar un 50%
+                }
+                writer.println(referencia + " " + precio);
+            }
+
+            // Renombrar el archivo temporal al original
+            File archivoOriginal = new File(nombreArchivo);
+            File archivoTemporal = new File(nombreArchivo + "_temp");
+            if (archivoOriginal.delete() && archivoTemporal.renameTo(archivoOriginal)) {
+                System.out.println("Precios actualizados correctamente.");
+            } else {
+                System.err.println("Error al actualizar los precios.");
+            }
+
+        } catch (IOException | NumberFormatException e) {
+            System.err.println("Error al actualizar los precios: " + e.getMessage());
+        }
+    }
+
+    // Método main para probar las funciones
     public static void main(String[] args) {
-        ArrayList<Integer> referencias = new ArrayList<>();
-        ArrayList<Double> precio = new ArrayList<>();
-        insertArray(referencias, precio);
-        ejercicioUno(referencias, precio, "ayuda.txt");
+        // Ejemplo de uso
+        String[] referencias = {"REF001", "REF002", "REF003"};
+        double[] precios = {120.0, 80.0, 150.0};
+        String nombreArchivo = "articulos.txt";
 
-    }
+        // Escribir referencias y precios en el archivo
+        escribirArchivo(referencias, precios, nombreArchivo);
 
-    static void insertArray(ArrayList<Integer> referenciaArticulo, ArrayList<Double> precioProductos) {
-        Random rnd = new Random();
-        for (int i = 0; i < 10; i++) {
-            double iterador = rnd.nextDouble(10);
-            referenciaArticulo.add(i);
-            precioProductos.add(15 * iterador);
-        }
-    }
+        // Mostrar contenido del archivo
+        System.out.println("Contenido del archivo:");
+        mostrarContenido(nombreArchivo);
 
-    /*Metodo que ingresa la informacion del arraylist solicitado*/
-    static void ejercicioUno(ArrayList<Integer> referenciaArticulo, ArrayList<Double> precioProductos, String nombreFichero) {
-        String texto = "";
-        for (int i = 0; i < referenciaArticulo.size(); i++) {
-            texto += "ref: " + referenciaArticulo.get(i) + " Precio: " + precioProductos.get(i) + "\n";
-        }
-        try {
-            FileWriter fW = new FileWriter("c:" + File.separator + "prueba" + File.separator + nombreFichero);
-            PrintWriter escribir = new PrintWriter(fW);
-            escribir.println(texto);
-            escribir.close();
-            System.out.println("Texto guardado correctamente!");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        ejercicioDos(nombreFichero);
-    }
+        // Actualizar precios del archivo
+        actualizarPrecios(nombreArchivo);
 
-    /*metodo que muestra el contenido del fichero.*/
-    static void ejercicioDos(String nombreFichero) {
-        String texto;
-        try {
-            FileReader fr = new FileReader("c:" + File.separator + "prueba" + File.separator + nombreFichero);
-            BufferedReader leer = new BufferedReader(fr);
-            System.out.println("Salida:");
-            do {
-                texto = leer.readLine();
-                if (texto != null) {
-                    System.out.println(texto);
-                }
-            } while (!texto.isEmpty());
-            leer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        ejercicioTres(nombreFichero);
-    }
-    /*Falta terminar este ejercicio*/
-    static void ejercicioTres(String nombreFichero) {
-        String texto;
-        try {
-            FileReader fr = new FileReader("c:" + File.separator + "prueba" + File.separator + nombreFichero);
-            BufferedReader leer = new BufferedReader(fr);
-            do {
-                texto = leer.readLine();
-                if (texto != null) {
-                    System.out.println(texto);
-                }
-            } while (texto != null);
-            leer.close();
-            /**********************************/
-            FileWriter fW = new FileWriter("C:/prueba/salida.txt");
-            PrintWriter escribir = new PrintWriter(fW);
-            do {
-                System.out.println("Ingresar texto");
-                texto = sc.nextLine();
-                if (!texto.isEmpty()) {
-                    escribir.println(texto);
-                }
-            } while (!texto.isBlank());
-            escribir.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        // Mostrar contenido actualizado del archivo
+        System.out.println("Contenido actualizado del archivo:");
+        mostrarContenido(nombreArchivo);
     }
 }
