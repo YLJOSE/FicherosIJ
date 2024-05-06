@@ -1,4 +1,5 @@
 package EjerciciosCinco;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +25,62 @@ class Casa implements Serializable {
         this.numeroHabitaciones = numeroHabitaciones;
     }
 
-    // Getters
-    // Setters
+    public String getDireccion() {
+        return direccion;
+    }
 
-    // Método para escribir lista de casas en un archivo
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getPortal() {
+        return portal;
+    }
+
+    public void setPortal(String portal) {
+        this.portal = portal;
+    }
+
+    public String getPiso() {
+        return piso;
+    }
+
+    public void setPiso(String piso) {
+        this.piso = piso;
+    }
+
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public double getMetrosCuadrados() {
+        return metrosCuadrados;
+    }
+
+    public void setMetrosCuadrados(double metrosCuadrados) {
+        this.metrosCuadrados = metrosCuadrados;
+    }
+
+    public int getNumeroHabitaciones() {
+        return numeroHabitaciones;
+    }
+
+    public void setNumeroHabitaciones(int numeroHabitaciones) {
+        this.numeroHabitaciones = numeroHabitaciones;
+    }
+
     public static void escribirCasas(List<Casa> casas, String nombreArchivo) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(nombreArchivo))) {
             oos.writeObject(casas);
@@ -47,23 +100,5 @@ class Casa implements Serializable {
             System.err.println("Error al leer el archivo: " + e.getMessage());
         }
         return casas;
-    }
-}
-
-// Clase principal
-public class Main {
-    public static void main(String[] args) {
-        // Ejemplo de uso:
-        List<Casa> casas = new ArrayList<>();
-        casas.add(new Casa("Calle Ejemplo", "1", "2", "Ciudad Ejemplo", "12345", 100.0, 3));
-
-        // Escribir casas en un archivo
-        Casa.escribirCasas(casas, "casas.dat");
-
-        // Leer casas desde un archivo
-        List<Casa> casasLeidas = Casa.leerCasas("casas.dat");
-        for (Casa casa : casasLeidas) {
-            System.out.println(casa.toString());
-        }
     }
 }
