@@ -1,0 +1,56 @@
+1º.- Ejercicio América
+
+Se tiene la base de datos América, compuesta por las tablas Personas y Países.
+Hacer un programa en Java que cree la tabla PersonasPaises que tendrá los siguientes atributos:
+Id, Nombre, Apellido, Edad, NombrePais y Tamaño.
+La información que va almacenar es la sacada de las otras dos tablas.
+Tras crear dicha tabla, actualizarla sumando 1 a la edad de las personas de Costa Rica.
+Finalmente sacar un listado con toda la información de la nueva tabla.
+
+2º. Ejercicio Empresa
+
+Ejecutar el fichero empresa.sql, que creará la base de datos Empresa, compuesta de las tablas Empleados y Departamentos.
+ Hacer un programa que actualice la tabla Empleados, mediante el fichero binario datos.dat.
+El fichero, datos.dat, tiene la siguiente estructura:
+El primer campo es una cadena que contendrá una A, una B o una M (alta, baja o modificación) y
+ dependiendo de la operación tendrá los siguientes campos.
+Si es una baja sólo aparecerá el código del empleado a dar de baja.
+Si es un alta, vendrán todos los datos que forman parte de la tabla Empleados que
+es donde se van a insertar los datos.
+Y si es una modificación, vendrá el código del empleado y el porcentaje que se subirá el salario.
+Finalmente, sacar un informe en el que aparezca:
+Nº Empleado Nombre Empleado Salario Nombre Departamento
+
+3º.- Ejercicio Coches
+
+Sea la base de datos llamada DatosCoches, compuesta de dos tablas Propietarios y Coches y
+la cual se generará ejecutando el script Coches.sql.
+Hacer un programa en java que cree la tabla SeguroCoche, cuya estructura es la siguiente:
+Dni, Edad, Matricula y Seguro.
+Los datos a insertar, se sacarán de las tablas anteriores, excepto el atributo Seguro
+que se calculará de acuerdo a las siguientes premisas:
+el 2% del precio del coche para aquellos propietarios que tengan menos de 40 años
+el 1% para el resto.
+Posteriormente, se actualizara la tabla según el valor del seguro. Las condiciones son:
+Si el seguro es menor de 100, éste se incrementará en un 5%
+Si está comprendido entre 100 y 400, se quedará igual.
+Si es mayor de 400 se dará de baja.
+Finalmente, se escribirá en pantalla la tabla actualizada
+
+4º.-  Ejercicio Personal
+
+Sea la base de datos llamada Personal, compuesta de dos tablas Empleado y
+ Departamento las cuales se generarán ejecutando el script personal.sql
+Hacer un programa en java que cree la tabla OficinaEmpleados, cuya estructura es la siguiente:
+Nombre Empleado, Nombre Departamento, Salario y Comisión.
+Los datos a insertar, se sacarán de las tablas anteriores, excepto el
+atributo Comisión que se calculará de acuerdo al departamento al que pertenezca:
+Si pertenece a 'Contabilidad', será el 10% del salario.
+Si pertenece a 'Investigación', será el 20% del salario.
+Si pertenece a 'Ventas', será el 5% del salario.
+Si pertenece a 'Producción', será el 15% del salario.
+Posteriormente, se actualizara la tabla según la comisión. Las condiciones son:
+Si la comisión es menor de 300, este se incrementará en un 10%
+Si está comprendida entre 400 y 600, se incrementará en un 5%
+Si es mayor de 600 se quedará igual.
+Finalmente, se escribirá en pantalla la tabla actualizada
