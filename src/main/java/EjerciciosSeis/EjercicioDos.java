@@ -26,22 +26,17 @@ public class EjercicioDos {
         Statement st2 = conectionJnr.createStatement();
         consultationsSQL(st, st2);
     }
+
     static void consultationsSQL(Statement st, Statement st2) throws SQLException {
 
         ResultSet rst = st.executeQuery(instSQLConsult);
-        int id, edad;
-        String nombre, nombrePais, tamnnoPais, instSQLInsert;
+        int numId, salario;
+        String nombre, nombreDep;
         while (rst.next()) {
-            id = rst.getInt("id");
-            nombre = rst.getString("nombre");
-            edad = rst.getInt("edad");
-            nombrePais = rst.getString("nombrePais");
-            tamnnoPais = rst.getString("tamañoPais");
-
-            instSQLInsert = "insert into PersonasPais values(" + id + "," +
-                    "'" + nombre + "'" + "," + edad + "," + "'" + nombrePais +
-                    "'" + "," + "'" + tamnnoPais + "'" + ");";
-           // insertTable(st2, instSQLInsert);
+            numId = rst.getInt("emp_no");
+            nombre = rst.getString("apellido");
+            salario = rst.getInt("salario");
+            nombreDep = rst.getString("dnombre");
         }
     }
 }
