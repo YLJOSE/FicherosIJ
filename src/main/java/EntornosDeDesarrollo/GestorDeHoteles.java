@@ -25,16 +25,16 @@ public class GestorDeHoteles {
             System.out.println("Ingresa la contraseña:");
             password = sc.nextInt();
 
-            for (int i = 0; i < clientes.size(); i++) {
-                if (clientes.get(i).getNumCliente() == password && clientes.get(i).getNombre().equalsIgnoreCase(user)) {
-                    System.out.println("Hola: " + clientes.get(i).getNombre() + "\n");
+            for (Cliente cliente : clientes) {
+                if (cliente.getNumCliente() == password && cliente.getNombre().equalsIgnoreCase(user)) {
+                    System.out.println("Hola: " + cliente.getNombre() + "\n");
                     menuCliente();
                     logeoCorrecto = true;
                 }
             }
-            for (int i = 0; i < administradores.size(); i++) {
-                if (administradores.get(i).getUser().equalsIgnoreCase(user) && administradores.get(i).getPassword() == password) {
-                    System.out.println("Hola: " + administradores.get(i).getUser() + "\n");
+            for (Administrador administradore : administradores) {
+                if (administradore.getUser().equalsIgnoreCase(user) && administradore.getPassword() == password) {
+                    System.out.println("Hola: " + administradore.getUser() + "\n");
                     menuAdmi();
                     logeoCorrecto = true;
                 }
@@ -117,7 +117,6 @@ public class GestorDeHoteles {
     static void createObject(ArrayList<Cliente> clientes, ArrayList<Administrador> administradores) {
         Cliente c1 = new Cliente(123456789, "pedro", 999996845);
         Cliente c2 = new Cliente(998877755, "carlos", 897512474);
-        ;
         Administrador a1 = new Administrador("12313254dsr", 54554544);
         Administrador a2 = new Administrador("54asd4", 545564654);
         clientes.add(c1);
