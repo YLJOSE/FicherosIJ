@@ -15,9 +15,9 @@ public class VerBaseDeDatos {
             while (rs.next()) {
                 System.out.println("BD: " + rs.getString(1));
             }
-            String consulta = "CREATE DATABASE " + "BDNueva";
+            String consulta = "CREATE DATABASE " + "Tienda";
             st.executeUpdate(consulta);
-            st.executeUpdate("USE BDNueva");
+            st.executeUpdate("USE Tienda");
             st.executeUpdate(
                     "create table newTable(id int primary key, nombre varchar(25), apellido varchar(25),)");
 
