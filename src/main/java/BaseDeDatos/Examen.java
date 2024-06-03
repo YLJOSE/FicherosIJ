@@ -45,14 +45,15 @@ public class Examen {
             System.out.println("BD: " + rst.getString(1));
         }
         System.out.println();
+        st.executeUpdate(instSQLUpdateCreateDB);
         st.executeUpdate("use tienda;");
-       /*
-       *  st.executeUpdate(insertFabricantes + "(1,'Kingston');");
+        st.executeUpdate(instSQLUpdateFabricantes);
+        st.executeUpdate(instSQLUpdateArticulos);
+        st.executeUpdate(insertFabricantes + "(1,'Kingston');");
         st.executeUpdate(insertFabricantes + "(2,'Adata');");
         st.executeUpdate(insertFabricantes + "(3,'Logitech');");
         st.executeUpdate(insertFabricantes + "(4,'Lexar');");
         st.executeUpdate(insertFabricantes + "(5,'Seagate');");
-
         st.executeUpdate(insertArticulos + "(1,'Teclado',100,3);");
         st.executeUpdate(insertArticulos + "(2,'Disco Duro 300Gb',500,5);");
         st.executeUpdate(insertArticulos + "(3,'Mouse',80,3);");
@@ -62,8 +63,8 @@ public class Examen {
         st.executeUpdate(insertArticulos + "(7,'Memoria USB',279,1);");
         st.executeUpdate(insertArticulos + "(8,'DVD Rom',450,2);");
         st.executeUpdate(insertArticulos + "(9,'CD Rom',200,2);");
-        st.executeUpdate(insertArticulos + "(10,'Tarjeta de Red',180,3);");*/
-        //st2.executeUpdate(instSQLUpdateCreateArtFab);
+        st.executeUpdate(insertArticulos + "(10,'Tarjeta de Red',180,3);");
+        st2.executeUpdate(instSQLUpdateCreateArtFab);
         listarTabla(st, st2);
     }
 

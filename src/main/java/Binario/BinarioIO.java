@@ -9,7 +9,7 @@ public class BinarioIO {
         int numeroMateria;
         double nota;
         try {
-            FileOutputStream fos = new FileOutputStream("c:/prueba/notas.data", true);
+            FileOutputStream fos = new FileOutputStream("c:/prueba/prueba.data", true);
             DataOutputStream dos = new DataOutputStream(fos);
             System.out.println("Ingrese un codigo de asignatura: (0 = SALIR)");
             numeroMateria = sc.nextInt();
