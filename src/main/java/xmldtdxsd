@@ -1,0 +1,97 @@
+atributo obligatorio:
+<xs:attribute name="grupo" type="xs:string" use="required"/>
+fixed: fijo(valor)
+default: defecto(valor)
+/*******************************/
+xs: lenght : establece una longitud fija
+xs:pattern : establece un patron de caracteres admitidos.
+/*********************************/
+EJEMPLO En el siguiente ejemplo se define un elemento llamado "color" 
+con la restricción de que los únicos valores admitidos son: "verde", "amarillo" y "rojo".
+<xs:element name="color">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="verde"/>
+         <xs:enumeration value="amarillo"/>
+         <xs:enumeration value="rojo"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+/***********************************/
+<xs:element name="mes" type="numeroMes"/>
+<xs:simpleType name="numeroMes">
+   <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="12"/>
+   </xs:restriction>
+</xs:simpleType>
+/***********************************/
+EJEMPLO En el siguiente ejemplo se define un elemento llamado 
+"letra" con la restricción de que el único valor admitido es una de
+las letras minúsculas de la "a" a la "z":
+<xs:element name="letra">
+   <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="[a-z]"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+/************************************/
+<?xml version="1.0" encoding="UTF-8"?>
+<bingo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="bingo.xsd">
+   <bola numero="17"/>
+   <bola numero="23"/>
+   <bola numero="65"/>
+</bingo>
+/****************************************/
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bingo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bola" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="numero" type="numeroDeBola"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="numeroDeBola">
+     <xs:restriction base="xs:positiveInteger">
+        <xs:minInclusive value="1"/>
+        <xs:maxExclusive value="90"/>
+     </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+/******************************/
+ <xs:group name="departamentosEmpresa">
+    <xs:choice>
+      <xs:element name="administración"/>
+      <xs:element name="informática"/>
+      <xs:element name="marketing"/>
+    </xs:choice>
+  </xs:group>
+/**********************/
+<departamento>
+      <marketing />
+    </departamento>
+/*************************/
+EJEMPLO En la DTD interna del siguiente documento XML,
+se ha declarado el elemento "mayor_de_edad" como vacío, EMPTY. 
+Por tanto, debe escribirse <mayor_de_edad/>:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+   <!ELEMENT persona (nombre, mayor_de_edad, ciudad)>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT mayor_de_edad EMPTY>
+   <!ELEMENT ciudad (#PCDATA)>
+]>
+
+<persona>
+   <nombre>Elsa</nombre>
+   <mayor_de_edad/>
+   <ciudad>Pamplona</ciudad>
+</persona>
